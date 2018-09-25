@@ -35,9 +35,9 @@
         <url>http://issues.apache.org/jira/browse/AXIS</url>
     </issueManagement>
     <scm>
-        <connection>scm:svn:http://svn.apache.org/repos/asf/axis/axis1/java/trunk</connection>
-        <developerConnection>scm:svn:https://svn.apache.org/repos/asf/axis/axis1/java/trunk</developerConnection>
-        <url>http://svn.apache.org/viewvc/axis/axis1/java/trunk</url>
+        <connection>scm:git:git@github.com:seeburger-ag/axis1-java.git</connection>
+        <developerConnection>scm:git:git@github.com:seeburger-ag/axis1-java.git</developerConnection>
+        <url>https://github.com/seeburger-ag/axis1-java</url>
     </scm>
     <mailingLists>
         <mailingList>
@@ -491,9 +491,21 @@
     <properties>
         <javaVersion>1.4</javaVersion>
         <baseUrl>http://axis.apache.org/axis/java</baseUrl>
-        <baseSiteUrl>scm:svn:https://svn.apache.org/repos/asf/axis/site/axis/java</baseSiteUrl>
+        <distMgmtSnapshotsUrl>https://repo.seeburger.de/archiva/repository/snapshot/</distMgmtSnapshotsUrl>
+        <distMgmtSnapshotsName>SEEBURGER Snapshot Repository</distMgmtSnapshotsName>
+        <baseSiteUrl>scm:git:https://github.com/seeburger-ag/axis1-java</baseSiteUrl>
     </properties>
     <distributionManagement>
+        <repository>
+          <id>apache.releases.https</id>
+          <name>Apache Release Distribution Repository</name>
+          <url>https://repo.seeburger.de/archiva/repository/release/</url>
+        </repository>
+        <snapshotRepository>
+          <id>apache.snapshots.https</id>
+          <name>${distMgmtSnapshotsName}</name>
+          <url>${distMgmtSnapshotsUrl}</url>
+        </snapshotRepository>
         <site>
             <id>axis</id>
             <url>${baseSiteUrl}/</url>
