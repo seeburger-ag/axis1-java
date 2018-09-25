@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.apache.axis</groupId>
         <artifactId>axis-project</artifactId>
-        <version>1.4.1-SNAPSHOT</version>
+        <version>1.4.1.SEE1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>apidocs</artifactId>
@@ -171,7 +171,7 @@
                          of changes between releases (to avoid mass changes when committing the site for a new release) -->
                     <notimestamp>true</notimestamp>
                     <windowtitle>Apache Axis</windowtitle>
-                    <bottom>Copyright &#169; {organizationName}. All Rights Reserved.</bottom>
+                    <bottom>Copyright © {organizationName}. All Rights Reserved.</bottom>
                     <!-- doctitle only appears in the summary and we should include the version there -->
                     <doctitle>Apache Axis ${project.version}</doctitle>
                     <tags>

@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.apache.axis</groupId>
         <artifactId>samples</artifactId>
-        <version>1.4.1-SNAPSHOT</version>
+        <version>1.4.1.SEE1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>jms-sample</artifactId>
@@ -162,40 +162,40 @@
                         </goals>
                         <configuration>
                             <target unless="skipTests">
-                                <echo message="Executing samples.jms.JMSTest ..."/>
+                                <echo message="Executing samples.jms.JMSTest ..." />
                                 <java classname="samples.jms.JMSTest" fork="true" failonerror="true">
-                                    <classpath refid="maven.test.classpath"/>
-                                    <sysproperty key="axis.ServerConfigFile" file="src/main/wsdd/server-config.wsdd"/>
-                                    <arg value="-c"/>
-                                    <arg value="${project.build.directory}/conf/activemq-connection-factory.properties"/>
-                                    <arg value="-d"/>
-                                    <arg value="dynamicQueues/testQ"/>
-                                    <arg value="XXX"/>
+                                    <classpath refid="maven.test.classpath" />
+                                    <sysproperty key="axis.ServerConfigFile" file="src/main/wsdd/server-config.wsdd" />
+                                    <arg value="-c" />
+                                    <arg value="${project.build.directory}/conf/activemq-connection-factory.properties" />
+                                    <arg value="-d" />
+                                    <arg value="dynamicQueues/testQ" />
+                                    <arg value="XXX" />
                                 </java>
-                                <echo message="Executing samples.jms.dii.JMSURLTest ..."/>
+                                <echo message="Executing samples.jms.dii.JMSURLTest ..." />
                                 <java classname="samples.jms.dii.JMSURLTest" fork="true" failonerror="true">
-                                    <classpath refid="maven.test.classpath"/>
-                                    <sysproperty key="axis.ServerConfigFile" file="src/main/wsdd/server-config.wsdd"/>
-                                    <arg value="-c"/>
-                                    <arg value="${project.build.directory}/conf/activemq-connection-factory.properties"/>
-                                    <arg value="-d"/>
-                                    <arg value="dynamicQueues/testQ"/>
-                                    <arg value="-e"/>
-                                    <arg value="jms:/dynamicQueues/testQ?java.naming.factory.initial=org.apache.activemq.jndi.ActiveMQInitialContextFactory&amp;java.naming.provider.url=tcp://localhost:${test.brokerPort}&amp;ConnectionFactoryJNDIName=ConnectionFactory"/>
-                                    <arg value="XXX"/>
+                                    <classpath refid="maven.test.classpath" />
+                                    <sysproperty key="axis.ServerConfigFile" file="src/main/wsdd/server-config.wsdd" />
+                                    <arg value="-c" />
+                                    <arg value="${project.build.directory}/conf/activemq-connection-factory.properties" />
+                                    <arg value="-d" />
+                                    <arg value="dynamicQueues/testQ" />
+                                    <arg value="-e" />
+                                    <arg value="jms:/dynamicQueues/testQ?java.naming.factory.initial=org.apache.activemq.jndi.ActiveMQInitialContextFactory&amp;java.naming.provider.url=tcp://localhost:${test.brokerPort}&amp;ConnectionFactoryJNDIName=ConnectionFactory" />
+                                    <arg value="XXX" />
                                 </java>
-                                <echo message="Executing samples.jms.stub.JMSURLStubTest ..."/>
+                                <echo message="Executing samples.jms.stub.JMSURLStubTest ..." />
                                 <java classname="samples.jms.stub.JMSURLStubTest" fork="true" failonerror="true">
-                                    <classpath refid="maven.test.classpath"/>
-                                    <sysproperty key="axis.ServerConfigFile" file="src/main/wsdd/server-config.wsdd"/>
-                                    <sysproperty key="axis.ClientConfigFile" file="src/main/wsdd/client-config.wsdd"/>
-                                    <arg value="-c"/>
-                                    <arg value="${project.build.directory}/conf/activemq-connection-factory.properties"/>
-                                    <arg value="-d"/>
-                                    <arg value="dynamicQueues/testQ"/>
-                                    <arg value="-e"/>
-                                    <arg value="jms:/dynamicQueues/testQ?java.naming.factory.initial=org.apache.activemq.jndi.ActiveMQInitialContextFactory&amp;java.naming.provider.url=tcp://localhost:${test.brokerPort}&amp;ConnectionFactoryJNDIName=ConnectionFactory"/>
-                                    <arg value="XXX"/>
+                                    <classpath refid="maven.test.classpath" />
+                                    <sysproperty key="axis.ServerConfigFile" file="src/main/wsdd/server-config.wsdd" />
+                                    <sysproperty key="axis.ClientConfigFile" file="src/main/wsdd/client-config.wsdd" />
+                                    <arg value="-c" />
+                                    <arg value="${project.build.directory}/conf/activemq-connection-factory.properties" />
+                                    <arg value="-d" />
+                                    <arg value="dynamicQueues/testQ" />
+                                    <arg value="-e" />
+                                    <arg value="jms:/dynamicQueues/testQ?java.naming.factory.initial=org.apache.activemq.jndi.ActiveMQInitialContextFactory&amp;java.naming.provider.url=tcp://localhost:${test.brokerPort}&amp;ConnectionFactoryJNDIName=ConnectionFactory" />
+                                    <arg value="XXX" />
                                 </java>
                             </target>
                         </configuration>

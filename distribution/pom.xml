@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.apache.axis</groupId>
         <artifactId>axis-project</artifactId>
-        <version>1.4.1-SNAPSHOT</version>
+        <version>1.4.1.SEE1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>distribution</artifactId>
@@ -103,35 +103,35 @@
                         </goals>
                         <configuration>
                             <target unless="${skipTests}">
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/addr"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/attachments"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/bidbuy"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/echo"/>
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/addr" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/attachments" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/bidbuy" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/echo" />
                                 
-                                <property name="deploy.dir" value="${project.build.directory}/jboss/deploy"/>
-                                <mkdir dir="${deploy.dir}"/>
+                                <property name="deploy.dir" value="${project.build.directory}/jboss/deploy" />
+                                <mkdir dir="${deploy.dir}" />
                                 <ant dir="${project.build.directory}/axis-${project.version}/samples/ejb" antfile="ant-build.xml">
-                                    <target name="j2w-simplebean"/>
-                                    <target name="j2w-nicethingsbean"/>
+                                    <target name="j2w-simplebean" />
+                                    <target name="j2w-nicethingsbean" />
                                 </ant>
                                 
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/encoding"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/faults"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/handler"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/integrationGuide"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/jaxrpc"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/jms"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/math"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/message"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/misc"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/perf"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/proxy"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/security"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/stock"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/swa"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/transport"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/userguide"/>
-                                <ant dir="${project.build.directory}/axis-${project.version}/samples/xbeans"/>
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/encoding" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/faults" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/handler" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/integrationGuide" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/jaxrpc" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/jms" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/math" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/message" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/misc" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/perf" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/proxy" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/security" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/stock" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/swa" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/transport" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/userguide" />
+                                <ant dir="${project.build.directory}/axis-${project.version}/samples/xbeans" />
                             </target>
                         </configuration>
                     </execution>

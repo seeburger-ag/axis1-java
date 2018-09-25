@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.apache.axis</groupId>
         <artifactId>axis-project</artifactId>
-        <version>1.4.1-SNAPSHOT</version>
+        <version>1.4.1.SEE1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>integration</artifactId>
@@ -1467,8 +1467,8 @@
                         <configuration>
                             <target>
                                 <!-- TODO: quick and dirty hack to be able to compile all tests -->
-                                <mkdir dir="${project.build.directory}/generated-test-sources/wsdl2java/samples/client"/>
-                                <copy file="../distribution/src/main/files/samples/client/DynamicInvoker.java" todir="${project.build.directory}/generated-test-sources/wsdl2java/samples/client"/>
+                                <mkdir dir="${project.build.directory}/generated-test-sources/wsdl2java/samples/client" />
+                                <copy file="../distribution/src/main/files/samples/client/DynamicInvoker.java" todir="${project.build.directory}/generated-test-sources/wsdl2java/samples/client" />
                             </target>
                         </configuration>
                     </execution>
@@ -1481,7 +1481,7 @@
                         <configuration>
                             <target>
                                 <!-- The schema2 test replaces a generated bean by a simple JavaBean. Remove the generated class. -->
-                                <delete file="${project.build.directory}/generated-test-sources/wsdl2java/test/wsdl/schema2/Document.java"/>
+                                <delete file="${project.build.directory}/generated-test-sources/wsdl2java/test/wsdl/schema2/Document.java" />
                             </target>
                         </configuration>
                     </execution>
