@@ -28,6 +28,7 @@
     <artifactId>axis-rt-core</artifactId>
     <name>Axis Runtime Core</name>
     <url>${baseUrl}/core</url>
+    <description>${name}</description><!-- used for manifest generation -->
     <distributionManagement>
         <site>
             <id>axis</id>
@@ -193,15 +194,39 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.5.4</version>
+                <executions>
+                    <execution>
+                        <id>bundle-manifest</id>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>manifest</goal>
+                        </goals>
+                        <configuration>
+                            <instructions>
+                                <_exportcontents>*</_exportcontents>
+                                <Import-Package>com.sun.*;resolution:=optional,org.omg.*;resolution:=optional,sun.awt.*;resolution:=optional,sun.security.*;resolution:=optional,*</Import-Package>
+                                <_nouses>true</_nouses>
+                                <_noee>true</_noee>
+                            </instructions>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
                     <archive>
+                        <!-- use generated manifest from maven-bundle-plugin -->
+                        <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
                         <manifestSections>
                             <manifestSection>
                                 <name>org/apache/axis</name>
                                 <manifestEntries>
                                     <Implementation-Title>Apache Axis</Implementation-Title>
-                                    <Implementation-Version>${project.version}</Implementation-Version> 
+                                    <Implementation-Version>${project.version}</Implementation-Version>
                                     <Implementation-Vendor>Apache Axis</Implementation-Vendor>
                                 </manifestEntries>
                             </manifestSection>
